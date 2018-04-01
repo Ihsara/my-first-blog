@@ -8,5 +8,12 @@
         <h1>First blog of Trần Long Ch&acirc;u</h1>
         <h2><span style="color: #ff0000;">Welcome!</span></h2>
         <p><span style="color: #ff6600;">This is the first website attempt of Long Ch&acirc;u!!</span></p>
+        {% for post in posts %}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
+        {% endfor %}
     </body>
 </html>
